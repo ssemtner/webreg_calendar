@@ -99,11 +99,9 @@ async fn generate_calendar(mut multipart: Multipart) -> impl IntoResponse {
     (headers, text)
 }
 
-pub async fn serve() {
-    let app = Router::new()
+pub fn create() -> shuttle_axum::ShuttleAxum {
+    let router = Router::new()
         .route("/", get(index))
         .route("/", post(generate_calendar));
-
-    let listener = tokio::net::TcpListener::bind("0.0.0.0:3000").await.unwrap();
-    axum::serve(listener, app).await.unwrap();
+    Ok(router.into())
 }

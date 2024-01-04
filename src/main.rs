@@ -3,7 +3,7 @@ mod parse;
 mod server;
 mod types;
 
-#[tokio::main]
-async fn main() {
-    server::serve().await;
+#[shuttle_runtime::main]
+async fn main() -> shuttle_axum::ShuttleAxum {
+    server::create()
 }
