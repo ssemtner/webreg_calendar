@@ -29,11 +29,11 @@ async fn index() -> impl IntoResponse {
             <p>Upload a html file that is from <a href="https://act.ucsd.edu/webreg2/start" target="_blank">webreg</a> after you select a term (stay in list view). Make sure to select full page contents or the equivalent for your browser.</p>
             <hr />
             <form class="d-grid gap-3" method="post" enctype="multipart/form-data">
-                <label class="form-label" for="startDate">Term start date (this is winter 24)</label>
-                <input class="form-control" type="date" id="startDate" name="startDate" value="2024-01-08" />
+                <label class="form-label" for="startDate">Term start date (this is sp24)</label>
+                <input class="form-control" type="date" id="startDate" name="startDate" value="2024-04-01" />
 
                 <label class="form-lable" for="endDate">Term end date</label>
-                <input class="form-control" type="date" id="endDate" name="endDate" value="2024-03-16" />
+                <input class="form-control" type="date" id="endDate" name="endDate" value="2024-06-08" />
 
                 <label class="form-label" for="file">webregMain.html file</label>
                 <input class="form-control" type="file" id="file" name="file" />
